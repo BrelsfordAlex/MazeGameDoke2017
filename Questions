@@ -1,0 +1,41 @@
+Topics
+	
+Arrays / ArrayLists
+Linked Lists
+Stacks
+Binary Trees
+Recursion
+
+
+Arrays / ArrayLists
+T/F - ArrayLists are static fixed size and cannot grow or shrink during runtime. (FALSE)
+2
+3
+4
+5
+
+Linked List
+The Linked List type where items can be navigated forward and backward is a) Single LL, b) double LL c) circular LL (b DOUBLE LL)
+dfdsfsd
+
+C. Stacks
+What does popping something off of a stack mean?
+    A type of soda
+    B That noise people make that is annoying
+    C to remove the index 1 of a stack (Correct)
+    D  I don’t know
+Stack is the type ____.
+    A Integer   
+    B String
+    C Programmer chooses
+    D Generic (Correct)
+In a Stack what does push mean?
+    A Push it push it to the limit limit
+    B To push a String onto an Int Stack
+    C To push that bully you know
+    D To Add To A Stack(Correct)
+When you peak from a stack, what does that mean?
+  A It means you look at the thing  FIRST inputted
+  B You look at a random part of the stack
+  C None of the answers 
+  D You look at the top of the stack(Correct)
