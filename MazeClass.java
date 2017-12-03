@@ -1,9 +1,19 @@
 package ProjectThings1;
 
+
+
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.util.Timer;
+
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+
 
 
 /**
@@ -41,6 +51,10 @@ public class MazeClass extends JFrame
 
 	// This method to draw the maze
 	// @Override
+	/**
+	 * Paint method will paint the 
+	 * given maze. 
+	 */
 	public void paint(Graphics g) 
 	{
 		super.paint(g);
@@ -67,6 +81,66 @@ public class MazeClass extends JFrame
 	            g.drawRect(30 * col, 30 * row, 30, 30);
 	        }
 	   }
-     }	    
+     }	
+    @SuppressWarnings("unused")
+	private void initMazeClass() 
+    {
+        
+        addKeyListener(new TAdapter());
+        setFocusable(true);
+        setBackground(Color.BLACK);
+
+
+    }
+    /**
+     * 
+     * @param g
+     */
+	public void paintComponent(Graphics g) {
+        super.paintComponents(g);
+
+        doDrawing(g);
+
+        Toolkit.getDefaultToolkit().sync();
+    }
+	/**
+	 * 
+	 * @param g
+	 */
+    private void doDrawing(Graphics g) 
+    {
+        
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.drawImage( null, getX(), getY(), this);        
+    }
+    /**
+     * 
+     * @param e
+     */
+    public void actionPerformed(ActionEvent e) {
+        PlayerClass pc = new PlayerClass();
+        pc.move();
+        repaint();  
+    }
+    /**
+     * This is used to  use the methods key pressed and key released to move the player.
+     * @author Alex
+     *
+     */
+    private class TAdapter extends KeyAdapter {
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+            keyReleased(e);
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+            keyPressed(e);
+        }
+    }
+ 
+  
+}	    
 }
 
