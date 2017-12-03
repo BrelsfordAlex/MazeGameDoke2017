@@ -1,11 +1,15 @@
-package mazeProject;
- 
+package ProjectThings1;
+
+import java.awt.Color;
 import java.util.LinkedList; 
 import java.util.Random;
+import java.util.Timer;
 
 public class RandomMazeClass 
 {
     public static final String WALL_BLOCK = "\u2588"; // black box symbol
+
+	private static final String DELAY = null;
 
     // instance variables
     private Space cells[][]; // a 2d list of room/wall cell objects in the maze
@@ -179,8 +183,8 @@ public class RandomMazeClass
 	{
 		return numRooms;
 	}
- 
-      
+
+        
     public static void main(String[] args)
     {
     	//RandomMazeClass myMaze = new RandomMazeClass(15,15);
